@@ -1,44 +1,20 @@
-.container
-  .nav
-    .nav__name
-      %span
-        =current_user.name
-      %ul.nav__name__lists
-        %li.nav__name__lists__list
-          = link_to new_group_path do
-            = fa_icon 'pencil-square-o', class: 'icon'
-        %li.nav__name__lists__list
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
+ <body>
+  <header class ="header">
+ <p>グループを作成しました</p>
+ <div class="left-header">
+ <div class="right-header"></div>
+  </header>
 
-    .nav__room
-      - current_user.groups.each do |group|
-        = link_to group_messages_path(group) do
-          .nav__room__box
-            %p.nav__room__name
-              = group.name
-            %p.nav__room__comment
-              = group.show_last_message
-
-  .chat
-    .chat__info
-      .chat__info-left
-        .chat__info-left__name
-          %p
-            = @group.name
-        .chat__info-left__members
-          %p
-            Members:
-            = @users.pluck(:name).join(",")
-      .chat__info-right
-        = link_to 'Edit', edit_group_path(@group.id), class: "btn"
-    .chat__contents
-      = render @messages
-
-    .form
-      = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        = f.label :image , id: 'd-image' do
-          = fa_icon 'picture-o', class: 'fa-image'
-          = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'btn'
+  <div class='messages'>
+      <div class='message'>
+      </div>
+      <div class='message'>
+      </div>
+      <div class='message'>
+      </div>
+    <div class='form'>
+      <form>
+      </form>
+    </div>
+  </div>
+</body>
