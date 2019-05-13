@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw (-300px);
+  color: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+}
+
+.top-header {
+  color: #FFFFFF;
+  background-color: #38AEF0;
+  margin: 0 auto;
+  text-align: center;
+  height: 25px;
+}
+
+.left-header {
+  font-weight: bold;
+  width: 300px;
+  float: left;
+}
+
+.user {
+  font-size: 16px;
+  background-color: #253141;
+  line-height: 98px;
+  height: 98px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.right-header {
+  border-bottom: #eeeeee;
+  width: 100vh (-300px);
+  top: 45px;
+  left: 340px;
+  display: flex;
+  height: 82;
+  border-bottom-style: solid;
+  border-width: 2px;
+}
+
+.right-header-box {
+  margin-right: 60px;
+}
+
+.select {
+  padding-top: 35px;
+  padding-left: 40px;
+  float: left;
+}
+
+.right-header-button {
+  border-style: solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: #38AEF0;
+}
+
+.select-group-name {
+  font-size: 20px;
+  color: #333333;
+}
+
+.member-name {
+  font-size: 12px;
+  color: #999999;
+  padding-top: 15px;
+}
+
+.left-contents {
+  background-color: #2f3e51;
+  width: 300px;
+  position: relative;
+  padding-top: 20px;
+  height: 572px;
+}
+
+.group-list {
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.group-topic {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.group-message {
+  font-size: 11px;
+  padding-bottom: 40px;
+}
+
+.right-contents {
+  width: 100vh (-300px);
+  padding-top: 46px;
+  padding-left: 300px;
+}
+
+.comment-user {
+  font-size: 16px;
+  color: #333333;
+  float: left;
+  font-weight: bold;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #999999;
+  font-weight: bold;
+  display: flex;
+  padding-left: 10px;
+}
+
+.comment {
+  font-size: 12px;
+  color: #999999;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.space {
+  margin: 254px;
+}
+
+.form-box {
+  border-style: solid;
+  border-width: 18px;
+  color: #d3d3d3;
+  height: 50px;
+  text-align: 50px;
+  width: 100vw (-300px);
+  margin-left: 300px;
+}
+
+.form-guide {
+  float: left;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 12px;
+  color: #434A54;
+}
+
+.form-send {
+  background-color: #38AEF0;
+  color: white;
+  float: right;
+  height: 50px;
+  width: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: 15px;
+}
