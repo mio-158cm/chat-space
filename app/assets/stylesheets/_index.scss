@@ -172,7 +172,6 @@ ul {
   align-items: center;
   text-align: 15px;
 }
-
 .icon{
   color: black;
   position: absolute;
@@ -182,7 +181,16 @@ ul {
 .icon2{
   color:white;
 }
+// .hidden {
+//   display: none;
+// }
 a{
   color: white;
   text-decoration: none;
+}
+.hidden{
+  position: absolute;
+  top:18px;
+  right:120px;
+  width:30px;
 }
