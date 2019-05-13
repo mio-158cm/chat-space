@@ -47,48 +47,44 @@ ul {
 }
 .right-header {
   border-bottom: #eeeeee;
-  width: 100vh (-300px);
-  top: 45px;
-  left: 340px;
-  display: flex;
+  width : calc(100% - 300px) ;
+  margin-left:300px;
+  top: 40px;
   height: 82;
   border-bottom-style: solid;
   border-width: 2px;
 }
 
-.right-header-box {
-  margin-right: 60px;
-}
-
 .select {
   padding-top: 35px;
-  padding-left: 40px;
-  float: left;
+  padding-right:40px;
 }
-
 .right-header-button {
-  border-style: solid;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-style: solid; border-width: 1px;
   height: 40px;
+  width:80px;
   color: #38AEF0;
+  float:right;
+  position:relative;
+  margin-left:60px;
 }
-
+.button_text {
+  margin:0 auto;
+  position: absolute;
+  top:20%;
+  left:30%;
+}
 .select-group-name {
   font-size: 20px;
+  margin-left:40px;
   color: #333333;
 }
-
 .member-name {
   font-size: 12px;
   color: #999999;
   padding-top: 15px;
+  padding-left: 40px;
 }
-
 .left-contents {
   background-color: #2f3e51;
   width: 300px;
@@ -146,12 +142,13 @@ ul {
 
 .form-box {
   border-style: solid;
-  border-width: 18px;
+  border-width: 18px 40px; 
   color: #d3d3d3;
   height: 50px;
   text-align: 50px;
   width: 100vw (-300px);
   margin-left: 300px;
+  position: relative;
 }
 
 .form-guide {
@@ -162,7 +159,7 @@ ul {
   color: #434A54;
 }
 
-.form-send {
+.form-send{
   background-color: #38AEF0;
   color: white;
   float: right;
@@ -174,4 +171,11 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: 15px;
+}
+
+.icon{
+  color: black;
+  position: absolute;
+  top: 18px;
+  right:120px;
 }
