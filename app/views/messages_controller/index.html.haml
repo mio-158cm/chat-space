@@ -11,8 +11,6 @@
       .user-menu__new-group
         %a{:href => "/edit"}
         %i.fa.fa-cog
-
-
     .left-contents
       %ul.group-list
         %li.group-topic
@@ -31,13 +29,14 @@
           まだメッセージがありません
   .right-header
     .select
+      .right-header-button
+        .button_text
+          Edit
       .select-group-name
         test-group
       .member-name
         Member:mio_158cm
-    .right-header-box
-      .right-header-button
-        Edit
+
   .right-contents
     %ul.select-topic
       %li.comment-user
@@ -59,6 +58,8 @@
     .form-box
       .form-guide
         type a message
-      .form-icon
       .form-send
         send
+      .image-icon
+      %i.fa.fa-image.fa-lg.icon
+
