@@ -30,8 +30,21 @@ ul {
   height: 98px;
   padding-left: 20px;
   font-size: 16px;
+  position: relative;
 }
+.user-menu{
+  position: absolute;
+  top:60px;
+  left:250px;
 
+}
+.user-menu__edit-user{
+  float:left;
+  padding-right:5px;
+}
+.user-menu__new-group{
+  float:right;
+}
 .right-header {
   border-bottom: #eeeeee;
   width: 100vh (-300px);
@@ -102,7 +115,7 @@ ul {
 .right-contents {
   width: 100vh (-300px);
   padding-top: 46px;
-  padding-left: 340px;
+  padding-left: 330px;
 }
 
 .comment-user {
