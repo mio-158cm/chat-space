@@ -1,0 +1,6 @@
+@mixin clearfix{
+  @mixin flexbox {
+    @each $prefix in $prefixes {
+      display: #{$prefix}flex;
+    }
+  }

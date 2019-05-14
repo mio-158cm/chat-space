@@ -1,0 +1,67 @@
+%body
+  .top-header
+    グループを作成しました
+  .left-header
+    .user
+      mio_158cm
+    .user-menu
+      .user-menu__edit-user.icon2
+      %a{:href => "/edit.html.halm"}
+        %i.fa.fa-edit
+      .user-menu__new-group.icon2
+      %a{:href => "/menu.html.halm"}
+        %i.fa.fa-cog
+    .left-contents
+      %ul.group-list
+        %li.group-topic
+          test-group
+        %li.group-message
+          さようなら
+      %ul.group-list
+        %li.group-topic
+          sample-group
+        %li.group-message
+          hello!
+      %ul.group-list
+        %li.group-topic
+          example
+        %li.group-message
+          まだメッセージがありません
+  .right-header
+    .select
+      .right-header__button
+        .button_text
+          Edit
+      .select-group__name
+        test-group
+      .select-member__name
+        Member:mio_158cm
+
+  .right-contents
+    %ul.select-topic
+      %li.comment-user
+        mio_158cm
+      %li.comment-date
+        2019/05/10(Fri)07:53:23
+      %li.comment
+        こんにちは！
+    %ul.select-topic
+      %li.comment-user
+        mio_158cm
+      %li.comment-date
+        2019/05/10(Fri)07:53:23
+      %li.comment
+        こんにちは！
+  .space
+  .bottom-contents
+  .form
+    %form
+      .form-guide
+        type a message
+      .form-send
+        send
+      .image-icon
+        =fa_icon 'picture-o', class:'icon'
+        %input.hidden{type:'file'}
+
+
