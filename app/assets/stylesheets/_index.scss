@@ -59,7 +59,7 @@ ul {
   padding-top: 35px;
   padding-right:40px;
 }
-.right-header-button {
+.right-header__button {
   border-style: solid; border-width: 1px;
   height: 40px;
   width:80px;
@@ -74,12 +74,12 @@ ul {
   top:20%;
   left:30%;
 }
-.select-group-name {
+.select-group__name {
   font-size: 20px;
   margin-left:40px;
   color: #333333;
 }
-.member-name {
+.select-member__name {
   font-size: 12px;
   color: #999999;
   padding-top: 15px;
