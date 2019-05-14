@@ -1,17 +1,5 @@
 @import "./reset";
-.block {
-  background-color: #000;
- .title {
-   color: #FFF;
-   font-size: 70px;
-   text-align: center;
- }
- .text {
-   font-size: 15px;
-   color: #FFF;
-   span {
-     color: red;
-     font-size: 20px;
-   }
- }
-}
+@import "./index";
+@import "font-awesome";
+// @import "./mixin";
+@import "modules/user";
