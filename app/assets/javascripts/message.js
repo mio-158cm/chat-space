@@ -1,10 +1,10 @@
 $(function(){
 
   function buildHTML(message){
-    var insertImage = '';
-    if (message.image.url) {
-      insertImage = `<img src="${message.image.url}">`;
-    }
+    // var insertImage = '';
+    // if (message.image.url) {
+    //   insertImage = `<img src="${message.image.url}">`;
+    // }
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -42,8 +42,8 @@ $('#new_message').on('submit', function(e){
   .done(function(data){
     var html = buildHTML(data);
     $('.messages').append(html);
-    $('.form__message').val('');
-    $('.form__submit').prop('disabled', false);
+    $('.form__message').val('').reset();;
+    $('.form__submit').prop('disabled', false).reset();
     scroll()
 })
   .fail(function(){
