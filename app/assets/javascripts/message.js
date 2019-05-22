@@ -1,7 +1,10 @@
 $(function(){
 
   function buildHTML(message){
-
+    var insertImage = '';
+    if (message.image.url) {
+      insertImage = `<img src="${message.image.url}">`;
+    }
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -26,7 +29,6 @@ $(function(){
 $('#new_message').on('submit', function(e){
   e.preventDefault();
   e.stopPropagation();
-  console.log(this)
   var formData = new FormData(this);
   var url = $(this).attr('action');
   $.ajax({
