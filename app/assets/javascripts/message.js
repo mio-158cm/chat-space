@@ -5,7 +5,7 @@ $(function(){
     // if (message.image.url) {
     //   insertImage = `<img src="${message.image.url}">`;
     // }
-    var html = `<div class="message"  data-id=${message.id}>
+    var html = `<div class="message" id="${message.id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                       ${ message.user_name }
@@ -47,46 +47,55 @@ $('#new_message').on('submit', function(e){
     scroll()
 })
   .fail(function(){
-    alert('error');
+    // alert('error');
     $('.form__submit').prop('disabled', false);
   })
-})
 
 
-$(function(){
-  setInterval(update, 5000);
-});
-
-function update(){
-  var presentMessageId = $('.chat-box').last().attr('id')
+// 自動更新
+ var interval = setInterval(function(){
+  // setIntervalで5秒ごとに更新
+   var presentMessageId = $('.chat-box').last().attr('id')
+   // console.log(presentMessageId)
+   // 最新のメッセージからidを取得
   var presentHTML = window.location.href
+  // console.log(presentHTML)
+  // 現在のURLを表示
+
+  // ↓メッセージ画面以外だと反応しないようにする
    if (presentHTML.match(/\/groups\/\d+\/messages/)) {
-    // var message_id = $('.main-contents__body__list__message').last().data('id');
+    console.log(presentHTML)
+  // 現在のURLからIDを取得
      $.ajax ({
       url: presentHTML,
       type: 'GET',
-      data: {id: message_id},
+      data: {id: presentMessageId},
       dataType: 'json',
       processData: false,
       contentType: false
     })
      .done(function(json){
+      // insertHTMLを空欄として定義する
       var insertHTML = "";
+
       json.forEach(function(message){
         if (message.id > presentMessageId){
+      // insertHTMLにbuildHTMLを加える（messageの中身は変数）また、buildHTMLは非同期のつぶやき内容
           insertHTML += buildHTML(message);
+          // cosole.log(insertHTML)
+      // 右側のright-mainbodyに非同期のつぶやきであるbuildHTMLを入れていく作業
           $messages = $('.right-mainbody');
           $messages.append(insertHTML);
           $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
+          // alert("success")
         }
       });
     })
      .fail(function(data){
-            alert('失敗');
+      // alert('error')
     });
    } else {
     clearInterval(interval)
   }
-}
-});
-
+},5000);
+})
