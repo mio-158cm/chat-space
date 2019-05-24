@@ -2,6 +2,8 @@
   width: calc(100% - 300px);
   .header {
     position: fixed;
+    background-color:white;
+    width: calc(100% - 300px);
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
@@ -69,6 +71,9 @@
   }
 
   .form {
+    position: fixed;
+    bottom:0;
+    width: calc(100% - 300px);
     margin-top:0;
     z-index:2;
     background-color: #DDDDDD;
@@ -113,4 +118,7 @@
   position: absolute;
   top:0;
   left:300px;
+}
+.messages{
+  margin-bottom:90px;
 }
