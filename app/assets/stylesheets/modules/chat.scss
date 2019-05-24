@@ -1,10 +1,13 @@
 .chat {
   width: calc(100% - 300px);
   .header {
+    background-color:white;
+    width: calc(100% - 300px);
     position: fixed;
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
+    border-bottom: inset 1px #eee;
     .left-header {
       float: left;
       &__title {
@@ -39,6 +42,7 @@
   }
 
   .messages {
+    margin-bottom:90px;
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 146px 40px 0;
@@ -69,7 +73,9 @@
   }
 
   .form {
-    margin-top:0;
+    position:fixed;
+    width: calc(100% - 300px);
+    bottom: 0;
     z-index:2;
     background-color: #DDDDDD;
     box-sizing: border-box;
@@ -79,13 +85,13 @@
       border: none;
       float: left;
       height: 50px;
+      padding-left:10px;
       width: calc(100% - 150px);
     }
     &__mask {
       background-color: $white;
       float: left;
       height: 50px;
-      padding-right: 10px;
       &__image {
         font-size: 20px;
         line-height: 50px;

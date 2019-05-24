@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  def edit
+  end
 
   def index
     @users = User.where('name LIKE(?)', "%#{params[:name]}%" ).where.not(id: current_user)
@@ -23,10 +25,7 @@ class UsersController < ApplicationController
   end
 
 
-  def edit
-  end
 
-  def update
-  end
+
 
 end
