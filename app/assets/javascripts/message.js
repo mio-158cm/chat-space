@@ -1,9 +1,9 @@
 $(function(){
   function buildHTML(message){
-    // var insertImage = '';
-    // if (message.image.url) {
-    //   insertImage = `<img src="${message.image.url}">`;
-    // }
+    var insertImage = '';
+    if (message.image.url) {
+      insertImage = `<img src="${message.image.url}">`;
+    }
     var html = `<div class="message" data-id=${message.id}>
                   <div class="upper-message">
                     <div class="upper-message__user-name">
@@ -21,10 +21,9 @@ $(function(){
                 </div>`
         return html;
     }
-//非同期通信
+
 $('#new_message').on('submit', function(e){
   e.preventDefault();
-  // e.stopPropagation();
   var formData = new FormData(this);
   var url = $(this).attr('action');
   $.ajax({
@@ -47,36 +46,24 @@ $('#new_message').on('submit', function(e){
   })
 })
 
-//自動更新
-
   var reloadMessages = function() {
-    // ↓メッセージ画面以外だと反応しないようにする
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    //設定した_message.html.hamlのカスタムデータ属性{"data-id": "#{message.id}"}を利用し、ブラウザに表示されている最新メッセージのidを取得
-    //$('.message:last')のmessageは単数になる
     var last_message_id =  $('.message:last').data('id');
 
     $.ajax({
-      //ルーティングで設定した通りのURLを指定。api以前は省略可能
       url: 'api/messages',
       type: 'get',
       dataType: 'json',
-      //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
     .done(function(message) {
       console.log(message);
-      //messagesの中に何か入った時発火
       if(message.length !== 0) {
       var insertHTML = '';
-      //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる、insertHTMLは仮に入れるもの、messagesにするとエラーだった
       message.forEach(function(message) {
         insertHTML = buildHTML(message);
-      //メッセージが入ったHTMLを取得
       $('.messages').append(insertHTML);
-      //スクロール
       $('.messages').animate({scrollTop:$('.messages')[0].scrollHeight});
-      //メッセージを追加
     })
   }
     })
