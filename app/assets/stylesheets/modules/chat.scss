@@ -1,7 +1,11 @@
 .chat {
   width: calc(100% - 300px);
+  padding:0;
+  margin:0;
   .header {
     position: fixed;
+    background-color:white;
+    width: calc(100% - 300px);
     box-sizing: border-box;
     height: 100px;
     padding: 0 40px;
@@ -39,10 +43,11 @@
   }
 
   .messages {
+    overflow:scroll;
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 146px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 90px);
     .message {
       .upper-message {
         display: flex;
@@ -69,6 +74,9 @@
   }
 
   .form {
+    position: fixed;
+    bottom:0;
+    width: calc(100% - 300px);
     margin-top:0;
     z-index:2;
     background-color: #DDDDDD;
