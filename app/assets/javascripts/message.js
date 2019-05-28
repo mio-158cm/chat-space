@@ -39,7 +39,7 @@ $('#new_message').on('submit', function(e){
     $('.messages').append(html);
     $('.form__submit').prop('disabled', false);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
-    $('.form__message').val('');
+    $('.form__message').val('').reset();
 })
   .fail(function(){
     alert('error');
@@ -57,7 +57,6 @@ $('#new_message').on('submit', function(e){
       data: {id: last_message_id}
     })
     .done(function(message) {
-      console.log(message);
       if(message.length !== 0) {
       var insertHTML = '';
       message.forEach(function(message) {
